@@ -1,7 +1,7 @@
-import {Channel} from "./Channel";
+import { Channel } from "./Channel";
 
 export type Message = {
-    text: string;
-    userId: string;
-    channel: Channel;
-}
+  text: string;
+  userId: string;
+  channel: Channel;
+};
