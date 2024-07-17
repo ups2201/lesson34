@@ -8,7 +8,10 @@ export interface Store<S = any, A = Action> {
   subscribe(cb: () => void): () => void;
 }
 
-function configureStore(reducer: Reducer<State, Action>, state: State): Store {
+export function configureStore(
+  reducer: Reducer<State, Action>,
+  state: State,
+): Store {
   const subscribers = new Set();
   return {
     getState() {

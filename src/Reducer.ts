@@ -2,6 +2,7 @@ import { Action, ActionType } from "./Action";
 import { State } from "./State";
 import { Message } from "./Message";
 import { User } from "./User";
+import structuredClone from "@ungap/structured-clone";
 
 export type Reducer<State, Action> = (state: State, action: Action) => State;
 
@@ -28,7 +29,9 @@ export function reducer(state: State, action: Action): State {
     case ActionType.DELETE_MESSAGE: {
       const newState = structuredClone(state);
       const message = action.payload as Message;
-      newState.messages = newState.messages.filter((mes) => mes !== message);
+      newState.messages = newState.messages.filter(
+        (mes) => mes.id !== message.id,
+      );
       return newState;
     }
     case ActionType.FIND_MESSAGE: {
