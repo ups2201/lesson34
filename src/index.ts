@@ -17,6 +17,13 @@ function viewMessages() {
     const messages = loadMessage();
     messages.then((success) => {
         console.log(success);
+        store.dispatch({ type: ActionType.SHOW_MESSAGES, payload: success });
+
+        document.querySelector('.messages').remove();
+        let messagesDiv = document.createElement("div");
+        messagesDiv.classList.add("messages");
+        document.querySelector('section').append(messagesDiv);
+
         (success as Array<Message>).forEach((m) => {
             let messDiv = document.createElement("div");
             messDiv.classList.add("container");
@@ -25,9 +32,10 @@ function viewMessages() {
                 <div class="text"><p>${m.text}</p></div>
                 <div class="time-right time">${m.date}</div>
             `;
-        document.querySelector('section').append(messDiv);})
+            messagesDiv.append(messDiv);
+        })
     });
-    // store.dispatch({ type: ActionType.SHOW_MESSAGES, payload: success as Array<Message> })
+
 }
 
 function submitMessage() {
@@ -45,6 +53,12 @@ function submitMessage() {
 
 
 function render(state: State) {
+        console.log(state);
+        document.querySelector('.messages').remove();
+        let messagesDiv = document.createElement("div");
+        messagesDiv.classList.add("messages");
+        document.querySelector('section').append(messagesDiv);
+
         state.messages.forEach((m) => {
             let messDiv = document.createElement("div");
             messDiv.classList.add("container");
@@ -53,7 +67,7 @@ function render(state: State) {
                 <div class="text"><p>${m.text}</p></div>
                 <div class="time-right time">${m.date}</div>
             `;
-            document.querySelector('section').append(messDiv);
+            messagesDiv.append(messDiv);
         });
             //
             // store.dispatch({ type: ActionType.SHOW_MESSAGES, payload: success as Array<Message> })
