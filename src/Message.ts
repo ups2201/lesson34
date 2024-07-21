@@ -1,5 +1,5 @@
 export type Message = {
-  id: string;
-  text: string;
-  userId: string;
+  name: string;
+  message: string;
+  date: number;
 };
