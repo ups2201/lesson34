@@ -7,7 +7,7 @@ const config = {
 //  * @return {Object[]} messagesList
 //  */
 export async function getMessagesList() {
-    return fetch(`${config.firebaseBaseUrl}/${config.firebaseCollection}`, {
+    return fetch(`${config.firebaseBaseUrl}/${config.firebaseCollection}?orderBy=%22date%22&limitToLast=20`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
