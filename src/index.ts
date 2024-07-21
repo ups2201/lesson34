@@ -22,16 +22,26 @@ function viewMessages() {
         document.querySelector('.messages').remove();
         let messagesDiv = document.createElement("div");
         messagesDiv.classList.add("messages");
-        document.querySelector('section').append(messagesDiv);
-
+        document.querySelector('section div').append(messagesDiv);
         (success as Array<Message>).forEach((m) => {
+            const date = formatDate(new Date(m.date));
             let messDiv = document.createElement("div");
             messDiv.classList.add("container");
-            messDiv.innerHTML = `
-                <div class="name">${m.name}</div>
-                <div class="text"><p>${m.text}</p></div>
-                <div class="time-right time">${m.date}</div>
+            if (m.name === store.getState().currentUsername) {
+                messDiv.classList.add("darker");
+
+                messDiv.innerHTML = `
+                    <div class="name-left">${m.name}</div>
+                    <div class="text">${m.text}</div>
+                    <div class="time-right time">${date}</div>
+                `;
+            } else {
+                messDiv.innerHTML = `
+                <div class="name-right">${m.name}</div>
+                <div class="text">${m.text}</div>
+                <div class="time-left time">${date}</div>
             `;
+            }
             messagesDiv.append(messDiv);
         })
     });
@@ -48,7 +58,7 @@ function submitMessage() {
         date: date
     };
     store.dispatch({ type: ActionType.SEND_MESSAGE, payload: message })
-    // sendMessage(message);
+    sendMessage(message);
 }
 
 
@@ -57,27 +67,40 @@ function render(state: State) {
         document.querySelector('.messages').remove();
         let messagesDiv = document.createElement("div");
         messagesDiv.classList.add("messages");
-        document.querySelector('section').append(messagesDiv);
+        document.querySelector('section div').append(messagesDiv);
 
         state.messages.forEach((m) => {
             let messDiv = document.createElement("div");
             messDiv.classList.add("container");
-            messDiv.innerHTML = `
-                <div class="name">${m.name}</div>
-                <div class="text"><p>${m.text}</p></div>
-                <div class="time-right time">${m.date}</div>
-            `;
-            messagesDiv.append(messDiv);
-        });
-            //
-            // store.dispatch({ type: ActionType.SHOW_MESSAGES, payload: success as Array<Message> })
-            // // console.log(store.getState());
+            const date = formatDate(new Date(m.date));
+            if (m.name === store.getState().currentUsername) {
+                messDiv.classList.add("darker");
 
+                messDiv.innerHTML = `
+                    <div class="name-left">${m.name}</div>
+                    <div class="text">${m.text}</div>
+                    <div class="time-right time">${date}</div>
+                `;
+            } else {
+                messDiv.innerHTML = `
+                <div class="name-right">${m.name}</div>
+                <div class="text">${m.text}</div>
+                <div class="time-left time">${date}</div>
+            `;
+            }
+        });
 }
 
+setInterval(() => {
+    viewMessages();
+}, 3000);
+
+function formatDate(date: Date) {
+    return `${date.getDate()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+}
 
 document.querySelector('.show').addEventListener("click", viewMessages);
 document.querySelector('.send').addEventListener("click", submitMessage);
 
-const store = configureStore(reducer, {users: [], messages: []});
+const store = configureStore(reducer, {users: [], messages: [], currentUsername: "ups2201"});
 store.subscribe(() => render(store.getState()));

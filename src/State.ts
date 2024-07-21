@@ -4,4 +4,5 @@ import { Message } from "./Message";
 export interface State {
   users: Array<User>;
   messages: Array<Message>;
+  currentUsername: string;
 }

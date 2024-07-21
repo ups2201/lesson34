@@ -4,42 +4,48 @@
   background-color: #f1f1f1;
   border-radius: 5px;
   padding: 10px;
-  margin: 10px 0;
+  margin: 20px 0;
+  width: 55%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 60% 20%;
 }
 
 /* Darker chat container */
 .darker {
   border-color: #ccc;
   background-color: #ddd;
-}
-
-/* Clear floats */
-.container::after {
-  content: "";
-  clear: both;
-  display: table;
+  float: right;
 }
 
 /* Style time text */
 .time-right {
+  text-align: right;
   float: right;
   color: #aaa;
 }
 
-/* Style time text */
+.name-right {
+  float: right;
+  text-align: right;
+  color: cornflowerblue;
+  font-size: 20px;
+}
+
 .time-left {
+  text-align: left;
   float: left;
   color: #999;
 }
 
-.name {
-  width: 160px;
-  height: 30px;
+.name-left {
   float: left;
   color: cornflowerblue;
+  font-size: 20px;
 }
 
-.message {
+.text {
   margin: 10px 0;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -48,10 +54,29 @@
     Red hat Display,
     sans-serif;
   font-weight: 400;
+  font-size: 20px;
   height: 100px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+.messages {
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  padding: 40px;
+}
+
+.send-block {
+  height: 140px;
+  border: 2px solid #dedede;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 40% 30%;
+}
+.send-block textarea {
+  padding: 40px;
+  width: 90%;
+}
+
+.send {
+  float: right;
+  margin: 20px;
 }
