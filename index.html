@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Game of Life</title>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Online Chat</title>
 <script defer src="main.bundle.js"></script></head>
 <body>
-<button class="add">add Task</button>
-<button class="remove">remove Task</button>
-<button class="update">update Task</button>
-
-<script src="src/index.ts"></script>
+<h1>Chat Messages</h1>
+<main>
+	<section>
+		<div>
+			<div class="messages"></div>
+		</div>
+		<div class="send-block">
+			<div>
+				<label>Name:</label>
+				<input id="username" placeholder="enter username" value="ups2201">
+				<button class="send">Отправить</button>
+			</div>
+			<div>
+				<div class="smiles">
+					<span class="smile">😀</span>
+					<span class="smile">😁</span>
+					<span class="smile">😂</span>
+					<span class="smile">😃</span>
+					<span class="smile">😄</span>
+					<span class="smile">😄</span>
+				</div>
+				<textarea class="message" placeholder="enter message"></textarea>
+			</div>
+		</div>
+	</section>
+</main>
 </body>
 </html>
