@@ -16,7 +16,8 @@
 .darker {
   border-color: #ccc;
   background-color: #ddd;
-  float: right;
+  padding: 10px;
+  margin-left: auto;
 }
 
 /* Style time text */
@@ -70,13 +71,9 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 20% 40% 30%;
+  padding: 10px;
 }
 .send-block textarea {
   padding: 40px;
-  width: 90%;
-}
-
-.send {
-  float: right;
-  margin: 20px;
+  width: 96%;
 }
