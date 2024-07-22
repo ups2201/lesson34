@@ -33,6 +33,7 @@ function submitMessage() {
     };
     store.dispatch({ type: ActionType.SEND_MESSAGE, payload: message })
     sendMessage(message);
+    document.querySelector('textarea').value = '';
 }
 
 function render(state: State) {
@@ -77,3 +78,9 @@ document.querySelector('.send').addEventListener("click", submitMessage);
 
 const store = configureStore(reducer, {users: [], messages: [], currentUsername: "ups2201"});
 store.subscribe(() => render(store.getState()));
+
+document.querySelectorAll('.smile').forEach((smile) => {
+    smile.addEventListener("click", (event) => {
+        document.querySelector('textarea').value += (event.target as HTMLTextAreaElement).textContent;
+    });
+});
