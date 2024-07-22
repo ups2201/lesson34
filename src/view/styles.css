@@ -93,7 +93,7 @@ main {
 }
 
 .send-block {
-  height: 10rem;
+  height: 11rem;
   border: 0.1rem solid #dedede;
   border-radius: 5px;
   display: grid;
@@ -107,3 +107,8 @@ main {
   padding: 2rem;
   width: 90%;
 }
+
+.send-block label {
+  font-size: 1.5rem;
+}
+
