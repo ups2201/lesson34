@@ -3,11 +3,8 @@ const config = {
     firebaseCollection: "messages.json"
 };
 
-// /**
-//  * @return {Object[]} messagesList
-//  */
 export async function getMessagesList() {
-    return fetch(`${config.firebaseBaseUrl}/${config.firebaseCollection}?orderBy=%22date%22&limitToLast=10`, {
+    return fetch(`${config.firebaseBaseUrl}/${config.firebaseCollection}?orderBy=%22date%22&limitToLast=20`, {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json"
@@ -22,12 +19,6 @@ export async function getMessagesList() {
         );
 }
 
-// /**
-//  * @param {Object} data
-//  * @param {string} data.nickname
-//  * @param {string} data.message
-//  * @returns {boolean}
-//  */
 export async function sendMessage(data) {
     return fetch(`${config.firebaseBaseUrl}/${config.firebaseCollection}`, {
         method: "POST",

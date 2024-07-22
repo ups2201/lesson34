@@ -3,7 +3,7 @@ h1 {
 }
 
 html {
-  font-size: 9px;
+  font-size: 12px;
 }
 
 body {
@@ -90,6 +90,8 @@ main {
   border: 0.1rem solid #dedede;
   border-radius: 5px;
   padding: 2rem;
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .send-block {
