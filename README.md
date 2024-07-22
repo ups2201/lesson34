@@ -1,14 +1,21 @@
-# JavaScript Developer. Basic. lesson34
+# JavaScript Developer. Basic. lesson38
 
-Домашнее задание № 34 из курса ["OTUS JavaScript Developer. Basic"](https://github.com/vvscode/otus--javascript-basic/blob/master/lessons/lesson34/ht.md)
+Домашнее задание № 38 из курса ["OTUS JavaScript Developer. Basic"](https://github.com/vvscode/otus--javascript-basic/blob/master/lessons/lesson38/homework.md)
 
-Разработать структуру (структура, экшены, редьюсер) Redux store для приложения Чат. Структура должна позволять выполнять следующие операции:
+### "Разработать приложение "чат" на основе redux"
 
-получение списка сообщений
-получение одного сообщения
-отправка сообщения
-получение списка пользователей
-поиск по чату
+Необходимо:
+
+- создать и настроить проект
+- реализовать приложение чат - которое позволяет отправлять сообщения и отображает входящие сообщения из канала в firebase (api и формат сообщения будет предоставлено):
+  - использовать Redux структуру для приложения чат
+  - создать UI для приложения
+  - добавить функционал по отображению входящих сообщений
+  - добавить функционал по отправке сообщений
+  - добавить функционал по обработке смайликов (в виде картинок)
+- подготовить работу к сдаче
+- сделать ревью 2 других работ
+- сбросить ссылку на PR, опубликованный проект и рассмотренные пуллреквесты в чат с преподавателем
 
 [![Build and Deploy](https://github.com/ups2201/lesson34/actions/workflows/deploy.yml/badge.svg)](https://github.com/ups2201/lesson34/actions/workflows/deploy.yml)
 
