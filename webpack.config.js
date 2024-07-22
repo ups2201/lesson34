@@ -46,14 +46,6 @@ module.exports = {
       filename: "index.html",
       template: "./src/view/index.html",
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: "chat.html",
-    //   template: "./src/view/chat.html",
-    // }),
-    // new HtmlWebpackPlugin({
-    //   filename: "news.html",
-    //   template: "./src/view/news.html",
-    // }),
   ],
   mode: "development",
 };

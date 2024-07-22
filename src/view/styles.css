@@ -79,8 +79,8 @@ main {
   border-radius: 0.5rem;
   flex-grow: 2;
   font-family:
-          Red hat Display,
-          sans-serif;
+    Red hat Display,
+    sans-serif;
   font-size: 1.2rem;
   height: auto;
 }
@@ -112,4 +112,3 @@ main {
 .send-block label {
   font-size: 1.5rem;
 }
-
