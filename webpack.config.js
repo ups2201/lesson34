@@ -43,7 +43,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      filename: "index.html",
+      template: "./src/view/index.html",
     }),
   ],
   mode: "development",

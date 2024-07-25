@@ -1,0 +1,118 @@
+h1 {
+  text-align: center;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+}
+
+main {
+  margin: auto auto; /* Центрируем блоки */
+  width: 100%; /* Задаем ширину 100% что бы сделать ее резиновой */
+  max-width: 50rem; /* Устанавливаем максимальную ширину */
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+}
+
+/* Chat containers */
+.container {
+  border: 0.1rem solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 60% 20%;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+  padding: 1rem;
+  margin-left: auto;
+}
+
+/* Style time text */
+.time-right {
+  text-align: right;
+  float: right;
+  color: #aaa;
+}
+
+.name-right {
+  float: right;
+  text-align: right;
+  color: cornflowerblue;
+  font-size: 1.2rem;
+}
+
+.time-left {
+  text-align: left;
+  float: left;
+  color: #999;
+}
+
+.name-left {
+  float: left;
+  color: cornflowerblue;
+  font-size: 1.2rem;
+}
+
+.text {
+  margin: 0.8rem 0;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  flex-grow: 2;
+  font-family:
+    Red hat Display,
+    sans-serif;
+  font-size: 1.2rem;
+  height: auto;
+}
+
+.messages {
+  border: 0.1rem solid #dedede;
+  border-radius: 5px;
+  padding: 2rem;
+  overflow: auto;
+  max-height: 60vh;
+}
+
+.send-block {
+  height: 14rem;
+  border: 0.1rem solid #dedede;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 40% 30%;
+  row-gap: 1rem;
+  padding: 1rem;
+  margin: auto;
+}
+.send-block textarea {
+  padding: 2rem;
+  width: 90%;
+}
+
+.send-block label {
+  font-size: 1.5rem;
+}
+
+.smile {
+  cursor: pointer;
+}

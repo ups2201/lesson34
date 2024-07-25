@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/ups2201/lesson34#readme",
   "dependencies": {
+    "@ungap/structured-clone": "^1.2.0",
     "firebase-init": "^1.3.2",
     "lodash": "^4.17.21"
   },
@@ -35,6 +36,7 @@
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.6.0",
     "@types/jest": "^29.5.12",
+    "@types/ungap__structured-clone": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.3",

@@ -1,4 +1,4 @@
-# JavaScript Developer. Basic. lesson34
+# JavaScript Developer. Basic. lesson38
 
 Домашнее задание № 38 из курса ["OTUS JavaScript Developer. Basic"](https://github.com/vvscode/otus--javascript-basic/blob/master/lessons/lesson38/homework.md)
 
