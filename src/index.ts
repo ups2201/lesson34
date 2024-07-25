@@ -76,6 +76,10 @@ function formatDate(date: Date) {
 }
 
 document.querySelector(".send").addEventListener("click", submitMessage);
+document.querySelector("form").addEventListener("submit", (ev) => {
+  // чтобы не перезагружать страницу
+  ev.preventDefault();
+});
 
 const store = configureStore(reducer, {
   users: [],

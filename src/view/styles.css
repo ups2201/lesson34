@@ -90,11 +90,11 @@ main {
   border-radius: 5px;
   padding: 2rem;
   overflow: auto;
-  max-height: 100vh;
+  max-height: 60vh;
 }
 
 .send-block {
-  height: 11rem;
+  height: 14rem;
   border: 0.1rem solid #dedede;
   border-radius: 5px;
   display: grid;
@@ -111,4 +111,8 @@ main {
 
 .send-block label {
   font-size: 1.5rem;
+}
+
+.smile {
+  cursor: pointer;
 }
